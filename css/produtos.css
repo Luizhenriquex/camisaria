@@ -1,0 +1,228 @@
+@import url('../css/fonts.css');
+@import url('./custom.css');
+@import url('./animations.css');
+
+:root{
+
+    /*      Theme colors        */
+    --text-gray: #3f4954;
+    --text-light : #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /* gradient color   */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+    /*      theme font-family   */
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin : 'Josefin', cursive;
+    --Lexend: 'Lexend', cursive;
+    --Livvic : 'Livvic', cursive;
+    --Pacifico: 'Pacifico', cursive;
+}
+
+figure, input, textarea, p, h1, h2, h3, h4, h5, h6, ul,li{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+}
+.containerP{
+    max-width: 1300px;
+    margin: 0 1vw;
+} 
+h3{
+    font-size: 50px;
+    font-family: "Abel";
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: #000;
+}
+/* GERAL */
+
+/* BODY */
+body{
+    background-color: #eaeaea;
+}
+/* BODY */
+
+    .container-flex{
+        display: flex;
+        align-items: center;
+    }
+    header .col-flex.logo{
+        width: 240px;
+    }
+    header .col-flex.logo h1{
+       color: #fff;
+    }
+    header .col-flex.logo h1:hover {
+        color: black;
+        cursor: pointer;
+    }
+    header .col-flex.menu{
+        display: none;
+    }
+        header .col-flex.menu ul{
+            display: flex;
+        }
+                header .col-flex.menu ul li a{ 
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 20px;
+                  font-size: 18px;
+                }
+                header .col-flex.menu ul li:last-child a{
+                    background-color:#39b700;
+                    text-transform: uppercase;
+                }
+                header .col-flex.menu ul li a:hover{
+                    background-color: #fff;
+                    color:#000;
+                    transition: 0.1s;
+                }
+    
+/* MAIN */
+main .produtos .produtos_lista {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+main .produtos .produtos_lista .produto {
+    background: rgb(255, 255, 255);
+    width: 100%;
+    box-shadow: rgb(0 0 0 / 20%) 3px 5px 9px;
+    padding: 15px 15px 65px 15px;
+    position: relative;
+    margin-bottom: 20px;
+}
+main .produtos .produtos_lista .produto:hover {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(206,206,206,1) 90%);
+}
+    main .produtos .produtos_lista .produto .produto_desconto {
+        background-color: #39b701;
+        color: #fff;
+        padding: 3px 10px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    main .produtos .produtos_lista .produto .produto_foto img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    main .produtos .produtos_lista .produto .produto_foto figcaption {
+        display: none;
+    }
+    main .produtos .produtos_lista .produto h2{
+        font-size: 16px;
+        font-weight: 100;
+        color: #535353;
+    }
+    main .produtos .produtos_lista .produto .produto_avaliacao span {
+        display: inline-block;
+        position: relative;
+        width: 0;
+        height: 0;
+        border-left: calc(10px/2) solid transparent;
+        border-right: calc(10px/2) solid transparent;
+        border-bottom: 10px solid #666666;
+        top: calc(10px/-6);
+    }
+    main .produtos .produtos_lista .produto .produto_avaliacao span::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: calc(10px/2) solid transparent;
+        border-right: calc(10px/2) solid transparent;
+        border-top: 10px solid #666666;
+        top: calc(10px/3);
+        left: calc(10px/-2);
+    }
+    main .produtos .produtos_lista .produto .produto_avaliacao span.ativo {
+        border-left: calc(10px/2) solid transparent;
+        border-right: calc(10px/2) solid transparent;
+        border-bottom: 10px solid #f2c832;
+    }
+    main .produtos .produtos_lista .produto .produto_avaliacao span.ativo::before {
+        border-left: calc(10px/2) solid transparent;
+        border-right: calc(10px/2) solid transparent;
+        border-top: 10px solid #f2c832;
+    }
+    main .produtos .produtos_lista .produto .produto_preco span {
+        display: block;
+        font-weight: bold;
+        color: #535353;
+        text-decoration: line-through;
+        font-size: 13px;
+    }
+    main .produtos .produtos_lista .produto .produto_preco strong {
+        font-size: 20px;
+        margin: 4px 0 6px;
+        display: block;
+    }
+    main .produtos .produtos_lista .produto .produto_preco p {
+        color: #535353;
+        font-size: 13px;
+    }
+    main .produtos .produtos_lista .produto .produto_adicionar_carrinho {
+        display: block;
+        width: 90%;
+        height: 40px;
+        border: none;
+        background-color: #39b701;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0 auto;
+        font-weight: 600;
+        position: absolute;
+        cursor: pointer;
+    }
+    main .produtos .produtos_lista .produto .produto_adicionar_carrinho:hover {
+        border: none;
+        background-color: rgb(69, 133, 5);
+    } 
+  
+/* MEDIA QUERIES */
+    @media screen and (min-width: 650px) {
+        .container-flex {
+            display: initial;
+        }
+        header .col-flex.logo {
+            margin-bottom: 20px;
+        }
+        header .col-flex.menu {
+            display: flex;
+            justify-content: center;
+        }
+            header .col-flex.menu ul li a {
+                padding: 10px 10px;
+                font-size: 10px;
+            }
+        main .produtos .produtos_lista .produto {
+            width: 296px;
+        }
+  
+    @media screen and (min-width: 1200px) {
+        .container-flex {
+        display: flex;
+        }
+        header .col-flex.logo {
+            margin-bottom: 0px;
+        }
+        header .col-flex.menu {
+            display: initial;
+        }
+            header .col-flex.menu ul li a {
+                padding: 10px 20px;
+                font-size: 18px;
+            }
+    }
+}
